@@ -14,7 +14,7 @@ const Navbar = () => {
     const fetchCurrentUser = async () => {
       try {
         const res = await fetch(
-          "http://localhost:3000/api/v1/users/getCurrentUser",
+          "https://quiz-backend-mwqs.onrender.com/api/v1/users/getCurrentUser",
           { credentials: "include" }
         );
 

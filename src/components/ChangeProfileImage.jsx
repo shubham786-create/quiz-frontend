@@ -24,7 +24,7 @@ const ChangeProfileImage = () => {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:3000/api/v1/users/updateAccount",
+        "https://quiz-backend-mwqs.onrender.com/api/v1/users/updateAccount",
         {
           method: "PATCH",
           credentials: "include",

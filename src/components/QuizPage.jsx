@@ -27,7 +27,7 @@ const QuizPage = () => {
       try {
         setLoading(true);
 
-        const res = await fetch('http://localhost:3000/api/v1/users/getQuizQuestions', {
+        const res = await fetch('https://quiz-backend-mwqs.onrender.com/api/v1/users/getQuizQuestions', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',
@@ -72,7 +72,7 @@ const QuizPage = () => {
     setSelectedOption(idx);
 
     try {
-      const res = await fetch('http://localhost:3000/api/v1/users/checkOptions', {
+      const res = await fetch('https://quiz-backend-mwqs.onrender.com/api/v1/users/checkOptions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -110,7 +110,7 @@ const QuizPage = () => {
     } else {
       // submit quiz
       try {
-        await fetch('http://localhost:3000/api/v1/users/submitQuiz', {
+        await fetch('https://quiz-backend-mwqs.onrender.com/api/v1/users/submitQuiz', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',

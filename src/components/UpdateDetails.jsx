@@ -27,7 +27,7 @@ const UpdateDetails = ({ user = {} }) => {
 
     try {
       const res = await fetch(
-        'http://localhost:3000/api/v1/users/updateAccount',
+        'https://quiz-backend-mwqs.onrender.com/api/v1/users/updateAccount',
         {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },

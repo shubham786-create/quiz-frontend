@@ -18,7 +18,7 @@ const ContactPage = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/api/v1/users/api/v1/users/createFeedback", {
+      const res = await fetch("https://quiz-backend-mwqs.onrender.com/api/v1/users/api/v1/users/createFeedback", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

@@ -84,7 +84,7 @@ const ProfilePage = () => {
       setImageUploading(true);
 
       const res = await fetch(
-        "http://localhost:3000/api/v1/users/updateProfile",
+        "https://quiz-backend-mwqs.onrender.com/api/v1/users/updateProfile",
         {
           method: "PATCH",
           credentials: "include",

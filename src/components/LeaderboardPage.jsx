@@ -23,10 +23,10 @@ const LeaderboardPage = () => {
         setLoading(true);
 
         const [topRes, userRes] = await Promise.all([
-          fetch('http://localhost:3000/api/v1/users/getTopUsers', {
+          fetch('https://quiz-backend-mwqs.onrender.com/api/v1/users/getTopUsers', {
             credentials: 'include',
           }),
-          fetch('http://localhost:3000/api/v1/users/getUserScore', {
+          fetch('https://quiz-backend-mwqs.onrender.com/api/v1/users/getUserScore', {
             credentials: 'include',
           }),
         ]);

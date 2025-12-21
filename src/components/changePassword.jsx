@@ -20,7 +20,7 @@ const ChangePassword = () => {
 
     try {
       const res = await fetch(
-        'http://localhost:3000/api/v1/users/changePassword',
+        'https://quiz-backend-mwqs.onrender.com/api/v1/users/changePassword',
         {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
