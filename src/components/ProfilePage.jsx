@@ -33,8 +33,9 @@ const ProfilePage = () => {
         const result = await res.json();
         console.log(result)
         setUser(result.data);
-      } catch {
-        navigate("/");
+      } catch(error) {
+        console.log(error)
+       
       } finally {
         setLoading(false);
       }
