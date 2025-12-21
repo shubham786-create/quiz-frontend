@@ -24,13 +24,14 @@ const ProfilePage = () => {
     const fetchUser = async () => {
       try {
         const res = await fetch(
-          "http://localhost:3000/api/v1/users/getCurrentUser",
+          "https://quiz-backend-mwqs.onrender.com/api/v1/users/getCurrentUser",
           { credentials: "include" }
         );
 
         if (!res.ok) throw new Error("Unauthorized");
 
         const result = await res.json();
+        console.log(result)
         setUser(result.data);
       } catch {
         navigate("/");
@@ -46,7 +47,7 @@ const ProfilePage = () => {
   const logout = async () => {
     try {
       const res = await fetch(
-        "http://localhost:3000/api/v1/users/logout",
+        "https://quiz-backend-mwqs.onrender.com/api/v1/users/logout",
         {
           method: "POST",
           credentials: "include",
@@ -58,6 +59,7 @@ const ProfilePage = () => {
       navigate("/");
     } catch (err) {
       console.error(err.message);
+      
     }
   };
 
